@@ -15,6 +15,8 @@
 		BE3F64791E27947E003C6245 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3F64781E27947E003C6245 /* MainVC.swift */; };
 		BE3F647B1E2795C1003C6245 /* FoodTruck.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3F647A1E2795C1003C6245 /* FoodTruck.swift */; };
 		BE7E41E81E2852F80096FB75 /* FoodTruckReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7E41E71E2852F80096FB75 /* FoodTruckReview.swift */; };
+		BE7E41EA1E286D9E0096FB75 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7E41E91E286D9D0096FB75 /* DataService.swift */; };
+		BE7E41EC1E2873E80096FB75 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7E41EB1E2873E80096FB75 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		BE3F64781E27947E003C6245 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		BE3F647A1E2795C1003C6245 /* FoodTruck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTruck.swift; sourceTree = "<group>"; };
 		BE7E41E71E2852F80096FB75 /* FoodTruckReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTruckReview.swift; sourceTree = "<group>"; };
+		BE7E41E91E286D9D0096FB75 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		BE7E41EB1E2873E80096FB75 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		BE3F64731E279184003C6245 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BE7E41E91E286D9D0096FB75 /* DataService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			children = (
 				BE3F64581E278B16003C6245 /* Assets.xcassets */,
 				BE3F645D1E278B16003C6245 /* Info.plist */,
+				BE7E41EB1E2873E80096FB75 /* Constants.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -251,6 +257,8 @@
 				BE3F64791E27947E003C6245 /* MainVC.swift in Sources */,
 				BE3F647B1E2795C1003C6245 /* FoodTruck.swift in Sources */,
 				BE7E41E81E2852F80096FB75 /* FoodTruckReview.swift in Sources */,
+				BE7E41EA1E286D9E0096FB75 /* DataService.swift in Sources */,
+				BE7E41EC1E2873E80096FB75 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
