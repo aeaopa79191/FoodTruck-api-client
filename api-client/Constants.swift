@@ -26,3 +26,41 @@ let POST_ADD_NEW_TRUCK = "\(BASE_API_URL)/foodtruck/add"
 
 //POST add review for a specific food truck
 let POST_ADD_NEW_REVIEW = "\(BASE_API_URL)/foodtruck/reviews/add"
+
+
+//Boolean auth UserDefaults keya
+let DEFAULTS_REGISTERED = "isRegistered"
+let DEFAULTS_AUTHENTICATED = "isAuthenticated"
+
+//Auth Email
+let DEFAULTS_EMAIL = "email"
+
+//Auth Token
+let DEFAULTS_TOKEN = "authToken"
+
+//REGISTER url
+let POST_REGISTER_ACCT = "\(BASE_API_URL)/account/register"
+
+let POST_LOGIN_ACCT = "\(BASE_API_URL)/account/login"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
