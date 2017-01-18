@@ -47,12 +47,25 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBi-Qc-Uhc">
+                                        <rect key="frame" x="330" y="32" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="WB4-3Y-cRD"/>
+                                            <constraint firstAttribute="width" constant="25" id="z8K-kA-ZPh"/>
+                                        </constraints>
+                                        <state key="normal" image="Plus Button"/>
+                                        <connections>
+                                            <action selector="addButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jFR-Wy-C0D"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.48627450980392156" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="yBi-Qc-Uhc" secondAttribute="bottom" constant="8" id="9q1-vq-Zwk"/>
                                     <constraint firstItem="lji-d2-vvs" firstAttribute="centerX" secondItem="YoH-MU-Rgu" secondAttribute="centerX" id="CTs-8q-xcv"/>
                                     <constraint firstAttribute="height" constant="65" id="MXh-6y-Jar"/>
                                     <constraint firstAttribute="bottom" secondItem="lji-d2-vvs" secondAttribute="bottom" constant="4" id="mA4-PV-CPZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="yBi-Qc-Uhc" secondAttribute="trailing" constant="20" id="pSc-MM-8vG"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FK3-rB-1cj">
@@ -140,5 +153,6 @@
     </scenes>
     <resources>
         <image name="Logo" width="424" height="236"/>
+        <image name="Plus Button" width="56" height="56"/>
     </resources>
 </document>
