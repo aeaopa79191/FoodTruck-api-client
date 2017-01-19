@@ -37,23 +37,33 @@ class AddTruckVC: UIViewController {
                 return
         }
         
-        guard let avgcost = avgCostField.text, avgCostField.text != ""
+        guard let avgcost = Double(avgCostField.text!), avgCostField.text != ""
             else{
                 showAlert(with: "Error", message: "Please enter an average cost.")
                 return
         }
         
-        guard let latitude = latField.text, latField.text != ""
+        guard let latitude = Double(latField.text!), latField.text != ""
             else{
                 showAlert(with: "Error", message: "Please enter a latitude.")
                 return
         }
         
-        guard let longitude = longField.text, longField.text != ""
+        guard let longitude = Double(longField.text!), longField.text != ""
             else{
                 showAlert(with: "Error", message: "Please enter a longitude.")
                 return
         }
+        
+        DataService.instance.addNewFoodTruck(name, foodtype: foodtype, avgcost: avgcost, latitude: latitude, longitude: longitude, completion: {
+            Success in if Success{
+                print("We saved succefully")
+                self.dissmissViewController()
+            }else{
+                self.showAlert(with: "Error", message: "An error occurred saving the new food truck")
+                print("We did not save successfully")
+            }
+        })
         
     }
     
