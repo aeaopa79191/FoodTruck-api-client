@@ -235,10 +235,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OF2-jT-IPL">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
                                         <state key="normal" title="Add New Truck"/>
+                                        <connections>
+                                            <action selector="addButtonTapped:" destination="dF2-v0-KdX" eventType="touchUpInside" id="Z5s-GK-Mqn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rv-Wv-5tP">
                                         <rect key="frame" x="145" y="0.0" width="105" height="30"/>
                                         <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="dF2-v0-KdX" eventType="touchUpInside" id="G0d-QR-MTT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -263,6 +269,13 @@
                             <constraint firstItem="dOf-RY-O0K" firstAttribute="top" secondItem="CIL-gs-fjd" secondAttribute="bottom" constant="24" id="xDa-76-KKb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="avgCostField" destination="ufV-1w-XoB" id="dXa-6J-43l"/>
+                        <outlet property="foodTypeField" destination="yO9-dD-m1E" id="rfl-cP-EcP"/>
+                        <outlet property="latField" destination="gRZ-bP-Hfs" id="Ms5-WF-tGK"/>
+                        <outlet property="longField" destination="CIL-gs-fjd" id="ONY-y8-DBf"/>
+                        <outlet property="nameField" destination="C1l-iP-WsH" id="yR7-xX-wVF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGa-kx-l0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
