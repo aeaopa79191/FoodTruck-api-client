@@ -26,9 +26,20 @@ class DetailsVC: UIViewController {
         nameLabel.text = selectedFoodTruck?.name
         foodTypeLabel.text = selectedFoodTruck?.foodType
         avgCostLabel.text = "\(selectedFoodTruck!.avgCost)"
+        
+        mapView.addAnnotation(selectedFoodTruck!)
+        centerMapOnLocation(CLLocation(latitude: (selectedFoodTruck?.lat)!, longitude: (selectedFoodTruck?.long)!))
 
         // Do any additional setup after loading the view.
     }
 
+    func centerMapOnLocation(_ location:CLLocation){
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(selectedFoodTruck!.coordinate, 1000, 1000)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
 
+    @IBAction func backButtonTapped(sender: UIButton){
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
 }

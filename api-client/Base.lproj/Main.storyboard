@@ -107,7 +107,7 @@
                                             <outlet property="avgCostLabel" destination="0DM-Jq-5Lg" id="dA6-kI-bca"/>
                                             <outlet property="foodTypeLabel" destination="Jnk-pg-Dbd" id="h3w-UK-4Jd"/>
                                             <outlet property="nameLabel" destination="FrB-Yn-eh2" id="ovP-PJ-XUZ"/>
-                                            <segue destination="jmC-tL-CBR" kind="show" identifier="showDetailsVC" trigger="accessoryAction" id="BCu-wI-mKY"/>
+                                            <segue destination="jmC-tL-CBR" kind="show" identifier="showDetailsVC" id="KHW-YN-qn2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -281,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGa-kx-l0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952.8" y="-571.66416791604206"/>
+            <point key="canvasLocation" x="1074" y="-1229"/>
         </scene>
         <!--DetailsVC-->
         <scene sceneID="ERd-Xr-967">
@@ -305,12 +305,15 @@
                                             <constraint firstAttribute="height" constant="29" id="XfF-cY-z3a"/>
                                         </constraints>
                                         <state key="normal" image="Back Arrow"/>
+                                        <connections>
+                                            <action selector="backButtonTappedWithSender:" destination="jmC-tL-CBR" eventType="touchUpInside" id="AuF-sw-tQM"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="uAP-TN-CBd">
-                                        <rect key="frame" x="66" y="35" width="244" height="22"/>
+                                        <rect key="frame" x="66" y="29" width="244" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="244" id="lrQ-Bh-CU5"/>
-                                            <constraint firstAttribute="height" constant="22" id="vhf-dR-emi"/>
+                                            <constraint firstAttribute="height" constant="28" id="vhf-dR-emi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -329,17 +332,17 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="x2c-23-ALv">
                                 <rect key="frame" x="16" y="220" width="343" height="427"/>
                             </mapView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YqC-bG-Jqr">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-100" translatesAutoresizingMaskIntoConstraints="NO" id="YqC-bG-Jqr">
                                 <rect key="frame" x="16" y="90" width="343" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZo-6N-gMY">
-                                        <rect key="frame" x="0.0" y="0.0" width="212.5" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="221.5" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.48627450979999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzm-kp-WBT">
-                                        <rect key="frame" x="222.5" y="0.0" width="120.5" height="20"/>
+                                        <rect key="frame" x="121.5" y="0.0" width="221.5" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -349,17 +352,17 @@
                                     <constraint firstAttribute="height" constant="20" id="ahJ-Kf-rW3"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="84C-9d-8p9">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-100" translatesAutoresizingMaskIntoConstraints="NO" id="84C-9d-8p9">
                                 <rect key="frame" x="16" y="125" width="343" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg Cost:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBy-yb-x01">
-                                        <rect key="frame" x="0.0" y="0.0" width="219.5" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="221.5" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.48627450979999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8i-hj-coS">
-                                        <rect key="frame" x="219.5" y="0.0" width="123.5" height="20"/>
+                                        <rect key="frame" x="121.5" y="0.0" width="221.5" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -400,15 +403,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="avgCostLabel" destination="xBy-yb-x01" id="8bp-aO-Zpg"/>
-                        <outlet property="foodTypeLabel" destination="VZo-6N-gMY" id="EUu-UN-9fI"/>
+                        <outlet property="avgCostLabel" destination="C8i-hj-coS" id="Hxg-AK-r1B"/>
+                        <outlet property="foodTypeLabel" destination="pzm-kp-WBT" id="rto-Yg-VZm"/>
                         <outlet property="mapView" destination="x2c-23-ALv" id="DnU-mJ-lfT"/>
                         <outlet property="nameLabel" destination="uAP-TN-CBd" id="31F-5Q-2mo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Io8-M5-gJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2712.8000000000002" y="-578.86056971514245"/>
+            <point key="canvasLocation" x="1897" y="-544"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Moa-6z-2i2">
