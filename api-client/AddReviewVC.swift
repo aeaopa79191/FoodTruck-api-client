@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AddReviewVC.swift
 //  api-client
 //
 //  Created by KaKin Chiu on 1/19/17.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AddReviewVC: UIViewController {
+    var selectedFoodTruck: FoodTruck?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +33,5 @@ class ViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
 
 }
