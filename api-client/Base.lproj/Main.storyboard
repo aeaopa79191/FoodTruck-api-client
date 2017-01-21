@@ -294,12 +294,120 @@
                     <view key="view" contentMode="scaleToFill" id="usd-jp-PcI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cB-cl-2bi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tW1-qI-2tq">
+                                        <rect key="frame" x="20" y="26" width="24" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="aqx-lz-USZ"/>
+                                            <constraint firstAttribute="height" constant="31" id="p3I-6R-Hcu"/>
+                                        </constraints>
+                                        <state key="normal" image="Back Arrow"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="8AU-eN-tqn" eventType="touchUpInside" id="bYN-Rl-S2v"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oti-eE-olw">
+                                        <rect key="frame" x="46.5" y="28" width="282" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="282" id="6bQ-AB-I6T"/>
+                                            <constraint firstAttribute="height" constant="26" id="NVR-Im-9db"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.48627450979999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Oti-eE-olw" firstAttribute="centerX" secondItem="5cB-cl-2bi" secondAttribute="centerX" id="4MG-PP-XZH"/>
+                                    <constraint firstAttribute="bottom" secondItem="tW1-qI-2tq" secondAttribute="bottom" constant="8" id="dMh-2U-9ow"/>
+                                    <constraint firstAttribute="height" constant="65" id="tIt-2J-LSV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oti-eE-olw" secondAttribute="bottom" constant="11" id="w56-89-4hj"/>
+                                    <constraint firstItem="tW1-qI-2tq" firstAttribute="leading" secondItem="5cB-cl-2bi" secondAttribute="leading" constant="20" id="wFB-rO-lTi"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl8-Cq-s1h">
+                                <rect key="frame" x="16" y="73" width="124" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="XJ8-nC-u5P"/>
+                                    <constraint firstAttribute="width" constant="124" id="ml9-bf-pTy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YNr-8T-Mv2">
+                                <rect key="frame" x="30.5" y="158" width="314" height="183"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="cLe-SA-zwE"/>
+                                    <constraint firstAttribute="width" constant="314" id="wuR-fL-aMD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Review Title Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f74-9D-qJr">
+                                <rect key="frame" x="30.5" y="113" width="314" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QEh-o9-dZe"/>
+                                    <constraint firstAttribute="width" constant="314" id="Qml-K0-Fvi"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXy-cZ-ic0">
+                                <rect key="frame" x="50.5" y="366" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="3Wp-Vr-Aa5"/>
+                                    <constraint firstAttribute="height" constant="30" id="aT2-2l-VNG"/>
+                                </constraints>
+                                <state key="normal" title="Add Review"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="8AU-eN-tqn" eventType="touchUpInside" id="uS7-kz-8H6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ht5-Gt-KxF">
+                                <rect key="frame" x="276.5" y="366" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="Bs2-vU-lCE"/>
+                                    <constraint firstAttribute="height" constant="30" id="nYv-ZP-SXd"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="8AU-eN-tqn" eventType="touchUpInside" id="W1q-bl-fDU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94187663612565442" green="0.94187663612565442" blue="0.94187663612565442" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ht5-Gt-KxF" firstAttribute="top" secondItem="YNr-8T-Mv2" secondAttribute="bottom" constant="25" id="1b7-Uq-iZG"/>
+                            <constraint firstAttribute="trailing" secondItem="5cB-cl-2bi" secondAttribute="trailing" id="66f-Dv-iPc"/>
+                            <constraint firstItem="5cB-cl-2bi" firstAttribute="leading" secondItem="usd-jp-PcI" secondAttribute="leading" id="AVs-Bl-Fwf"/>
+                            <constraint firstItem="5cB-cl-2bi" firstAttribute="top" secondItem="usd-jp-PcI" secondAttribute="top" id="DUq-Rn-8J3"/>
+                            <constraint firstItem="f74-9D-qJr" firstAttribute="centerX" secondItem="usd-jp-PcI" secondAttribute="centerX" id="IJG-Ew-art"/>
+                            <constraint firstItem="KXy-cZ-ic0" firstAttribute="leading" secondItem="YNr-8T-Mv2" secondAttribute="leading" constant="20" id="NF0-mp-qI7"/>
+                            <constraint firstItem="fl8-Cq-s1h" firstAttribute="top" secondItem="5cB-cl-2bi" secondAttribute="bottom" constant="8" id="UMA-lH-E8I"/>
+                            <constraint firstItem="KXy-cZ-ic0" firstAttribute="top" secondItem="YNr-8T-Mv2" secondAttribute="bottom" constant="25" id="YJe-fb-Of1"/>
+                            <constraint firstItem="YNr-8T-Mv2" firstAttribute="centerX" secondItem="usd-jp-PcI" secondAttribute="centerX" id="bzM-lc-A6F"/>
+                            <constraint firstItem="fl8-Cq-s1h" firstAttribute="leading" secondItem="usd-jp-PcI" secondAttribute="leadingMargin" id="f7P-GM-dvU"/>
+                            <constraint firstItem="YNr-8T-Mv2" firstAttribute="top" secondItem="f74-9D-qJr" secondAttribute="bottom" constant="15" id="qHx-Bq-juT"/>
+                            <constraint firstItem="f74-9D-qJr" firstAttribute="top" secondItem="fl8-Cq-s1h" secondAttribute="bottom" constant="8" id="t4Y-nR-nlR"/>
+                            <constraint firstItem="ht5-Gt-KxF" firstAttribute="trailing" secondItem="YNr-8T-Mv2" secondAttribute="trailing" constant="-20" id="w03-Hg-nmk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="headerLabel" destination="Oti-eE-olw" id="job-Uz-Hhn"/>
+                        <outlet property="reviewTextField" destination="YNr-8T-Mv2" id="kLU-cZ-SbY"/>
+                        <outlet property="reviewTitleField" destination="f74-9D-qJr" id="7cy-fh-VZK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qq2-OV-6Um" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="177"/>
+            <point key="canvasLocation" x="1896.8" y="176.76161919040482"/>
         </scene>
         <!--DetailsVC-->
         <scene sceneID="ERd-Xr-967">
