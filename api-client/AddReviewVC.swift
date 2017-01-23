@@ -45,7 +45,7 @@ class AddReviewVC: UIViewController {
             return
         }
         
-        DataService.instance.addNewReview(truck.id, title: title, text: reviewTextField, completion: {
+        DataService.instance.addNewReview(truck.id, title: title, text: reviewText, completion: {
             Success in if Success {
                 print("We saved successfully")
                 DataService.instance.getAllReviews(for: truck)
@@ -53,7 +53,7 @@ class AddReviewVC: UIViewController {
                 
             }else{
                 print("We saved unsuccessfully")
-                showAlert(with: "Error", message: "An error occurred saving the new Review")
+                self.showAlert(with: "Error", message: "An error occurred saving the new Review")
             }
         })
     }
@@ -75,7 +75,7 @@ class AddReviewVC: UIViewController {
     
     func showAlert(with title: String?, message: String?){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Error", style: Default, handler: nil)
+        let okAction = UIAlertAction(title: "Error", style: .default, handler: nil)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
